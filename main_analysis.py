@@ -384,6 +384,8 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import random
 import time
+import urllib3
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 sns.set_style('whitegrid')
 
@@ -413,7 +415,7 @@ print(f"Total posters to download: {len(df_sample)}")
 
 def get_dominant_color(url, timeout=5):
     try:
-        response = requests.get(url, timeout=timeout)
+        response = requests.get(url, timeout=timeout, verify=False)
         response.raise_for_status()
         # Open image and resize to speed up KMeans
         img = Image.open(BytesIO(response.content)).convert('RGB')
