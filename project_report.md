@@ -14,7 +14,7 @@ The dataset, `mymoviedb.csv`, contains metadata for nearly 10,000 films. Key att
 - **Popularity & Vote Metrics**: Quantitative measures of user engagement (`Vote_Average`, `Vote_Count`, `Popularity`).
 - **Genre & Overview**: Qualitative attributes describing the movie's content.
 
-**Data Cleaning Procedures**:
+**Data Cleaning Procedures** (`main_analysis.py`):
 1. **Datetime Conversion**: Standardized `Release_Date` strings into datetime objects to extract the `Release_Year` for temporal analysis.
 2. **Deduplication**: Aggregated duplicates by grouping records via `Title` and `Release_Year`, ensuring movie-level uniqueness.
 3. **Data Type Handling**: `Genre` features were represented as comma-separated strings; these were parsed into discrete lists for multi-label processing.
@@ -22,6 +22,7 @@ The dataset, `mymoviedb.csv`, contains metadata for nearly 10,000 films. Key att
 ---
 
 ### 3. Feature 1: Advanced Exploratory Data Analysis (EDA)
+**File**: `main_analysis.py`
 The EDA phase uncovered several critical insights regarding how movies perform in the market.
 
 #### 3.1 Statistical Correlation Analysis
@@ -40,6 +41,7 @@ A correlation matrix was computed to understand the relationship between `Popula
 ---
 
 ### 4. Feature 2: Machine Learning Classifier for Popularity
+**File**: `main_analysis.py`
 To predict how a movie will perform based on its metadata, a supervised learning model was trained to predict the `Vote_Average` quartile category.
 
 #### 4.1 Methodology
@@ -55,6 +57,7 @@ To predict how a movie will perform based on its metadata, a supervised learning
 ---
 
 ### 5. Feature 3: Content-Based Recommendation Engine
+**File**: `main_analysis.py` & `app.py`
 Discoverability is a major challenge in large movie catalogs. We developed a content-based filtering system to solve this.
 
 #### 5.1 Algorithmic Approach
@@ -69,6 +72,7 @@ Discoverability is a major challenge in large movie catalogs. We developed a con
 ---
 
 ### 6. Feature 4: Interactive Web Dashboard
+**File**: `app.py`
 To make the data accessible to non-technical stakeholders, an interactive web application was deployed using `Streamlit`.
 
 - **Dynamic Filtering**: Users can filter the entire 9,800 movie dataset by combining multiple genres, selecting release year ranges via sliders, and setting minimum vote count thresholds.
@@ -78,6 +82,7 @@ To make the data accessible to non-technical stakeholders, an interactive web ap
 ---
 
 ### 7. Feature 5: Computer Vision - Poster Color Analysis
+**File**: `main_analysis.py`
 Moving beyond text and metadata, we introduced a Computer Vision module to analyze the visual aesthetics of movie marketing.
 
 #### 7.1 Data Acquisition

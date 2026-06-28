@@ -4,14 +4,14 @@ This project explores a dataset of ~9,800 movies, extracting insights on popular
 
 ## The Unified Notebook
 
-- **`Full_Netflix_Project.ipynb`**: This master notebook combines all data processing, EDA, Machine Learning, and Computer Vision tasks into one seamless flow:
+- **`main_analysis.py`**: This master script combines all data processing, EDA, Machine Learning, and Computer Vision tasks into one seamless flow:
   - **1 & 2. Data Cleaning & Basic EDA**: Cleans `mymoviedb.csv` and answers fundamental exploratory questions.
   - **4. Advanced Correlation Analysis & Genre Trends**: Performs correlation analysis on popularity and votes, normalizes heavily right-skewed distributions, and charts the top 5 genres over time.
   - **5. Machine Learning Classifier for Popularity**: Prepares multi-hot encoded genres and trains a Random Forest Classifier to predict the `Vote_Average` quartile category, saving the best model into `models/`.
   - **6. Content-Based Movie Recommender**: Showcases how to fetch similar movies using TF-IDF and Cosine Similarity, including fuzzy string matching for typos.
   - **7. Computer Vision: Poster Color Analysis**: Dynamically downloads movie posters via `requests` and applies K-Means clustering to determine and analyze the dominant color/brightness for top genres.
   
-  *Run command*: `jupyter notebook Full_Netflix_Project.ipynb`
+  *Run command*: `python main_analysis.py` (Charts will automatically save to the `visualizations/` folder)
 
 ## The Interactive Dashboard
 
